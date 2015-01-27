@@ -11,10 +11,6 @@ App.Router.map(function () {
   this.route('post', {path: '/post/:id'});
 });
 
-App.Router.reopen({
-  location: 'auto'
-});
-
 var posts = [
   {
     id: 1,
