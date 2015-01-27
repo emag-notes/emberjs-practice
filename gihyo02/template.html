@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="libs/jquery-1.10.2.js"></script>
+  <script src="libs/handlebars-v2.0.0.js"></script>
+  <script src="libs/ember-1.9.1.js"></script>
+  <script src="template.js"></script>
+</head>
+<body>
+
+<script type="text/x-handlebars" data-template-name="index">
+<h1>{{title}}</h1>
+
+タグ:
+{{#each tag in tags}}
+<span>{{tag}}</span>
+{{/each}}
+
+{{!これはコメントです}}
+
+<p>{{body}}</p>
+
+書いたひと: {{author.name}}
+<div {{bind-attr class=status}}>
+  {{publishedAt}} 公開
+</div>
+
+{{#if author.twitter}}
+(@{{author.twitter}})
+{{/if}}
+
+<hr/>
+記事を修正する:
+{{input value=body}}
+</script>
+
+</body>
+</html>
