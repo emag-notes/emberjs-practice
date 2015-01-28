@@ -1,6 +1,12 @@
 'use strict';
 
 Todos.TodoController = Ember.ObjectController.extend({
+  actions: {
+    editTodo: function() {
+      this.set('isEditing', true);
+    }
+  },
+
   isCompleted: function(key, value) {
     var model = this.get('model');
 
